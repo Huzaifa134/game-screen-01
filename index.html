@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./responsive.css" />
+
+    <style></style>
+  </head>
+  <body>
+    <div id="startScreen">
+      <button onclick="showSelectionScreen('vsAI')">VS AI</button>
+      <button onclick="showSelectionScreen('tower')">Tower</button>
+    </div>
+
+    <div id="selectionScreen">
+      <h2>Select 4 Team Members!</h2>
+      <div id="characterChoices">
+        <div>
+          <img src="Seedling.png" />
+        </div>
+        <div>
+          <img src="Farmer.png" />
+        </div>
+        <div>
+          <img src="Trader.png" />
+        </div>
+        <div>
+          <img src="Degen.png" />
+        </div>
+        <div>
+          <img src="Hacker.png" />
+        </div>
+        <div>
+          <img src="Visionary.png" />
+        </div>
+        <div>
+          <img src="Manipulator.png" />
+        </div>
+        <!-- ... Add as many characters as you have ... -->
+      </div>
+      <button onclick="startFight()">Confirm Selection</button>
+    </div>
+    <!-- <div id="gameCont"> -->
+      <!-- <div id="gameUI"> -->
+        <div id="topHUD">
+          <div class="userHUD">
+            <div class="teamCharacters">
+              <div><img src="Seedling.png" alt="" /></div>
+              <div><img src="Visionary.png" alt="" /></div>
+              <div><img src="Hacker.png" alt="" /></div>
+              <div><img src="Farmer.png" alt="" /></div>
+            </div>
+            <div class="details">
+              <div class="hpText">1000/1000</div>
+              <div class="hpBar"></div>
+              <div class="energyBar"></div>
+            </div>
+          </div>
+          <div class="rounds">
+            <div class="roundsTwo">
+              <div class="userRound"></div>
+              <div class="winnerRound"></div>
+              <div class="enemyRound"></div>
+            </div>
+            <div class="countDown">120</div>
+          </div>
+          <div class="enemyHUD">
+            <div class="teamCharacters">
+              <div><img src="Degen.png" alt="" /></div>
+              <div><img src="Seedling.png" alt="" /></div>
+              <div><img src="Manipulator.png" alt="" /></div>
+              <div><img src="Trader.png" alt="" /></div>
+            </div>
+            <div class="details">
+              <div class="hpText">1000/1000</div>
+              <div class="hpBar"></div>
+              <div class="energyBar"></div>
+            </div>
+          </div>
+        </div>
+        <div id="bottomControls">
+          <div class="swapCharBtn"></div>
+          <div class="joystick">
+            <div class="swapCharSelection">
+              <div><img src="Seedling.png" alt="" /></div>
+              <div><img src="Visionary.png" alt="" /></div>
+              <div><img src="Hacker.png" alt="" /></div>
+              <div><img src="Farmer.png" alt="" /></div>
+            </div>
+            <div class="arrow arrow-up">↑</div>
+            <div class="arrow arrow-right">→</div>
+            <div class="arrow arrow-down">↓</div>
+            <div class="arrow arrow-left">←</div>
+            <div class="innerCircle"></div>
+          </div>
+
+          <div class="actionButtons">
+            <img src="skills/leaf_blade_slash.png" alt="" class="skill1" />
+            <img src="skills/photosynthetic_shield.png" alt="" class="skill2" />
+            <img src="skills/pollen_burst.png" alt="" class="skill3" />
+            <img src="skills/thorny_shield_bash.png" alt="" class="skill4" />
+            <img src="skills/basic.png" alt="" class="attack" />
+            <img src="skills/leaf_blade_slash.png" alt="" class="dodge" />
+            <div class="items">
+              <img src="skills/leaf_blade_slash.png" alt="" class="hpPotion" />
+              <img
+                src="skills/leaf_blade_slash.png"
+                alt=""
+                class="energyPotion"
+              />
+            </div>
+          </div>
+        </div>
+      <!-- </div> -->
+    <!-- </div> -->
+
+    <script>
+      let isDragging = false;
+      let characterSelect = false;
+      let dx = 0;
+      let dy = 0;
+      const innerCircle = document.querySelector(".innerCircle");
+      const joystick = document.querySelector(".joystick");
+
+      function startDrag(e) {
+        isDragging = true;
+      }
+
+      function stopDrag(e) {
+        isDragging = false;
+
+        if (characterSelect) {
+          const position = getJoystickPosition();
+          if (position == "left") {
+          } else if (position == "right") {
+          } else if (position == "top") {
+          } else if (position == "bottom") {
+          }
+          document.querySelector(".swapCharBtn").click();
+        }
+
+        innerCircle.style.transform = "translate(0px, 0px)";
+        moveDirection = { x: 0, z: 0, rotate: 0 };
+      }
+
+      function getJoystickPosition() {
+        if (Math.abs(dx) > Math.abs(dy)) {
+          if (dx > 0) {
+            return "right";
+          } else {
+            return "left";
+          }
+        } else {
+          if (dy > 0) {
+            return "bottom";
+          } else {
+            return "top";
+          }
+        }
+      }
+
+      function move(e) {
+        if (!isDragging) return;
+
+        const bounds = joystick.getBoundingClientRect();
+        const centerX = bounds.left + bounds.width / 2;
+        const centerY = bounds.top + bounds.height / 2;
+
+        let clientX = e.clientX || e.touches[0].clientX;
+        let clientY = e.clientY || e.touches[0].clientY;
+
+        dx = clientX - centerX;
+        dy = clientY - centerY;
+
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        const maxDistance = bounds.width / 2;
+
+        if (distance > maxDistance) {
+          dx = (dx / distance) * maxDistance;
+          dy = (dy / distance) * maxDistance;
+        }
+
+        innerCircle.style.transform = `translate(${dx}px, ${dy}px)`;
+        if (Math.abs(dx) > Math.abs(dy)) {
+          moveDirection.rotate = dx > 0 ? -0.01 : 0.01;
+        } else {
+          moveDirection.z = dy > 0 ? -characterSpeed : characterSpeed;
+        }
+      }
+
+      document.querySelector(".swapCharBtn").addEventListener("mouseup", () => {
+        if (characterSelect) {
+          characterSelect = false;
+        } else {
+          characterSelect = true;
+        }
+
+        document.querySelector(".swapCharSelection").classList.toggle("active");
+      });
+
+      innerCircle.addEventListener("mousedown", startDrag);
+      document.addEventListener("mouseup", stopDrag);
+      document.addEventListener("mousemove", move);
+
+      innerCircle.addEventListener("touchstart", startDrag);
+      document.addEventListener("touchend", stopDrag);
+      document.addEventListener("touchmove", move);
+
+      function lockOrientation(orientation) {
+        const screenOrient = screen.orientation || screen.mozOrientation || screen.msOrientation;
+
+        if (screenOrient) {
+          screenOrient.lock(orientation)
+            .then(() => {
+              console.log(`Successfully locked to ${orientation} orientation.`);
+            })
+            .catch((error) => {
+              console.warn(`Failed to lock to ${orientation} orientation:`, error);
+            });
+        }
+      }
+
+      function goFullScreen() {
+        const elem = document.documentElement;  // This targets the entire page
+
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) {  // Firefox
+          elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) {  // Chrome, Safari and Opera
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) {  // IE/Edge
+          elem.msRequestFullscreen();
+        }
+      }
+
+      document.body.addEventListener("click", function() {
+        goFullScreen();
+        lockOrientation("landscape-primary");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,364 @@
+html body {
+  width: 100vw;
+  height: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: black;
+}
+#startScreen {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+#startScreen button {
+  padding: 10px 50px;
+  font-size: 20px;
+  font-weight: bold;
+}
+#selectionScreen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+#selectionScreen h2 {
+  color: #ffffff;
+  text-align: center;
+}
+#selectionScreen,
+#characterScreen {
+  display: none;
+}
+#characterChoices {
+  display: flex;
+  gap: 10px;
+  flex-flow: row wrap;
+  width: 90vw;
+  justify-content: center;
+}
+#characterChoices div {
+  opacity: 0.5;
+}
+#characterChoices div.selected {
+  opacity: 1;
+}
+#characterChoices div img {
+  width: 250px;
+  cursor: pointer;
+}
+#gameUI {
+  /* position: absolute; */
+  width: 100%;
+  height: 100%;
+}
+.joystick {
+  background: #ffffff5e;
+  width: 200px;
+  height: 200px;
+  border-radius: 52%;
+  position: absolute;
+  overflow: hidden;
+  bottom: 50px;
+  left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.innerCircle {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  background: #ffffff;
+  border-radius: 50%;
+  z-index: 2;
+}
+.arrow {
+  font-size: 31px;
+  color: white;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.arrow.arrow-up {
+  top: 15%;
+  left: 50%;
+}
+.arrow.arrow-down {
+  bottom: 0;
+  left: 50%;
+}
+.arrow.arrow-left {
+  top: 50%;
+  left: 15%;
+}
+.arrow.arrow-right {
+  top: 50%;
+  right: 0;
+}
+.actionButtons {
+  position: absolute;
+  bottom: 0;
+  right: 2%;
+  width: 400px;
+  height: 300px;
+}
+.actionButtons > img {
+  width: 80px;
+  position: absolute;
+  background: rebeccapurple;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.actionButtons > img:nth-child(1) {
+  bottom: 5%;
+  left: 23%;
+}
+.actionButtons > img:nth-child(2) {
+  bottom: 41%;
+  left: 25%;
+}
+.actionButtons > img:nth-child(3) {
+  bottom: 63%;
+  right: 34%;
+}
+.actionButtons > img:nth-child(4) {
+  bottom: 55%;
+  right: 5%;
+}
+.actionButtons > img:nth-child(5) {
+  bottom: 16%;
+  right: 24%;
+  width: 125px;
+}
+.actionButtons > img:nth-child(6) {
+  bottom: 5%;
+  right: 6%;
+  width: 70px;
+}
+.items {
+  position: absolute;
+  display: flex;
+  /* flex-flow: column; */
+  bottom: 1%;
+  /* right: 100%; */
+  left: -200px;
+  gap: 5vh;
+}
+.items > img {
+  width: 70px;
+  background: red;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+#topHUD {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3vh;
+}
+.userHUD,
+.enemyHUD {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+.enemyHUD {
+  flex-flow: row-reverse;
+}
+.hpText {
+  font-size: 26px;
+  font-weight: bold;
+}
+.userHUD .hpText {
+  color: #00a7fd;
+}
+.enemyHUD .hpText {
+  color: #2e8a69;
+}
+.details {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  position: relative;
+}
+.userHUD > .details:after {
+  position: absolute;
+  right: 0;
+  width: 1px;
+  height: 55%;
+  content: "";
+  bottom: 0;
+  background: #ffffff;
+  box-shadow: 0px 0px 5px 1px white;
+}
+.enemyHUD > .details:after {
+  position: absolute;
+  left: 0;
+  width: 1px;
+  height: 55%;
+  content: "";
+  bottom: 0;
+  background: #ffffff;
+  box-shadow: 0px 0px 5px 1px white;
+}
+.enemyHUD > .details {
+  align-items: flex-start;
+}
+.userHUD .hpBar {
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.enemyHUD .hpBar {
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.hpBar {
+  width: 100%;
+  background: #2e8a69;
+  height: 15px;
+}
+.userHUD .energyBar {
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.enemyHUD .energyBar {
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.energyBar {
+  width: 75%;
+  background: #00a7fd;
+  height: 15px;
+  right: 0;
+  position: relative;
+  margin-top: 5px;
+}
+.teamCharacters {
+  aspect-ratio: 1;
+  margin: 0px 10px;
+  position: relative;
+  height: 140px;
+}
+.teamCharacters > div {
+  width: 50px;
+  aspect-ratio: 1;
+  overflow: hidden;
+  position: absolute;
+}
+.teamCharacters > div:nth-child(1) {
+  top: 26%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.teamCharacters > div:nth-child(2) {
+  left: 0;
+  top: 51.5%;
+  transform: translateY(-50%) rotate(45deg);
+}
+.teamCharacters > div:nth-child(3) {
+  right: 0;
+  top: 51.5%;
+  transform: translateY(-50%) rotate(45deg);
+}
+.teamCharacters > div:nth-child(4) {
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.teamCharacters > div > img {
+  width: 75px;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  background: green;
+}
+.rounds {
+  width: 8vw;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.roundsTwo {
+  display: flex;
+  gap: 0.25vw;
+  justify-content: center;
+}
+.roundsTwo div {
+  width: 35px;
+  aspect-ratio: 1;
+  background: #ffffff75;
+  border-radius: 50%;
+}
+.countDown {
+  text-align: center;
+  font-size: 40px;
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.swapCharSelection {
+  aspect-ratio: 1;
+  margin: 0px 10px;
+  position: relative;
+  height: 200px;
+  display: none;
+}
+.swapCharSelection.active {
+  display: block;
+}
+.swapCharSelection > div {
+  width: 40px;
+  aspect-ratio: 1;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+}
+.swapCharSelection > div:nth-child(1) {
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.swapCharSelection > div:nth-child(2) {
+  left: 5%;
+  top: 51.5%;
+  transform: translateY(-50%) rotate(45deg);
+}
+.swapCharSelection > div:nth-child(3) {
+  right: 5%;
+  top: 51.5%;
+  transform: translateY(-50%) rotate(45deg);
+}
+.swapCharSelection > div:nth-child(4) {
+  bottom: -5%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.swapCharSelection > div > img {
+  width: 75px;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  background: blue;
+}
+.swapCharBtn {
+  width: 70px;
+  position: fixed;
+  background: #998e33;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  bottom: 25%;
+  left: 1%;
+}

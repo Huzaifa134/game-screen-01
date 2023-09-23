@@ -1,0 +1,881 @@
+@media only screen and (max-width: 916px) {
+  body {
+    overflow: hidden;
+  }
+  #startScreen {
+    top: 45%;
+    left: 30%;
+    transform: scale(0.7);
+  }
+
+  .joystick {
+    left: -1%;
+    bottom: -3%;
+    transform: scale(0.6);
+  }
+  .swapCharBtn {
+    bottom: 40%;
+    width: 60px;
+  }
+
+  .actionButtons {
+    bottom: -10%;
+    right: -8%;
+    transform: scale(0.6);
+  }
+  .items {
+    bottom: 1%;
+    left: -200px;
+  }
+  .items img {
+    width: 70px;
+  }
+
+  #topHUD {
+    margin: 10px auto;
+  }
+  .teamCharacters {
+    height: 70px;
+  }
+  .teamCharacters > div:nth-child(1) {
+    top: 28%;
+    left: 50%;
+    /* transform: translate(-50%, -50%) rotate(45deg); */
+  }
+  .teamCharacters > div:nth-child(2) {
+    left: 4px;
+    top: 51.5%;
+    /* transform: translateY(-50%) rotate(45deg); */
+  }
+  .teamCharacters > div:nth-child(3) {
+    right: 4px;
+    top: 51.5%;
+    /* transform: translateY(-50%) rotate(45deg); */
+  }
+  .teamCharacters > div:nth-child(4) {
+    top: 75%;
+    left: 50%;
+    /* transform: translate(-50%, -50%) rotate(45deg); */
+  }
+  .teamCharacters > div {
+    width: 21px;
+  }
+  .countDown {
+    font-size: 25px;
+  }
+  .rounds {
+    margin: 10px 10px;
+  }
+  .roundsTwo div {
+    width: 13px;
+    /* margin: 0 3px; */
+  }
+
+  .hpText {
+    font-size: 15px;
+  }
+  .hpBar,
+  .energyBar {
+    height: 8px;
+  }
+}
+@media only screen and (max-width: 845px) {
+  body {
+    overflow: hidden;
+  }
+
+  .items {
+    bottom: 1%;
+    left: -200px;
+  }
+  .items img {
+    width: 60px;
+  }
+
+  #topHUD {
+    margin: 10px auto;
+    /* width: 90%; */
+  }
+  .teamCharacters {
+    height: 89px;
+  }
+  .teamCharacters > div {
+    width: 32px;
+  }
+}
+
+/* mi10t reference  */
+@media only screen and (max-width: 852px) {
+  body {
+    overflow: hidden;
+  }
+
+  .items {
+    bottom: 1%;
+    left: -200px;
+  }
+  .items img {
+    width: 60px;
+  }
+
+  #topHUD {
+    margin: 10px auto;
+  }
+  .teamCharacters {
+    height: 65px;
+  }
+  .teamCharacters > div {
+    width: 20px;
+  }
+  .hpText {
+    font-size: 15px;
+  }
+  .countDown {
+    font-size: 20px;
+  }
+  .roundsTwo {
+    margin: 0 10px;
+  }
+  .roundsTwo div {
+    width: 11px;
+  }
+  .hpBar,
+  .energyBar {
+    height: 8px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  body {
+    overflow: hidden;
+  }
+  #startScreen {
+    top: 45%;
+    left: 30%;
+    transform: scale(0.7);
+  }
+  .joystick {
+    left: -1%;
+    bottom: -3%;
+    transform: scale(0.6);
+  }
+  .swapCharBtn {
+    bottom: 40%;
+    width: 60px;
+  }
+
+  .actionButtons {
+    bottom: -20%;
+    right: -10%;
+    transform: scale(0.5);
+  }
+  .items {
+    bottom: 1%;
+    left: -200px;
+  }
+  .items img {
+    width: 70px;
+  }
+
+  #topHUD {
+    margin: 10px auto;
+  }
+  .teamCharacters {
+    height: 60px;
+  }
+  .teamCharacters > div {
+    width: 18px;
+  }
+  .countDown {
+    font-size: 24px;
+  }
+  .hpBar,
+  .energyBar {
+    height: 7px;
+  }
+}
+
+@media only screen and (max-width: 725px) {
+  body {
+    overflow: hidden;
+  }
+  #startScreen {
+    top: 45%;
+    left: 30%;
+    transform: scale(0.7);
+  }
+  .joystick {
+    left: -1%;
+    bottom: -3%;
+    transform: scale(0.7);
+  }
+  .swapCharBtn {
+    bottom: 40%;
+    width: 60px;
+  }
+
+  .actionButtons {
+    bottom: -10%;
+    right: -10%;
+    transform: scale(0.6);
+  }
+  .items {
+    bottom: 1%;
+    left: -200px;
+  }
+  .items img {
+    width: 70px;
+  }
+
+  #topHUD {
+    margin: 10px auto;
+  }
+  .teamCharacters {
+    height: 95px;
+  }
+  .teamCharacters > div {
+    width: 32px;
+  }
+  .countDown {
+    font-size: 35px;
+  }
+}
+@media only screen and (max-width: 668px) {
+  body {
+    overflow: hidden;
+  }
+  #startScreen {
+    left: 25%;
+  }
+  .joystick {
+    left: -4%;
+    bottom: -7%;
+    transform: scale(0.6);
+  }
+  .swapCharBtn {
+    /* bottom: 40%; */
+    width: 45px;
+  }
+
+  .actionButtons {
+    bottom: -20%;
+    right: -15%;
+    transform: scale(0.5);
+  }
+  .items {
+    bottom: 1%;
+    left: -200px;
+  }
+  .items img {
+    width: 60px;
+  }
+
+  #topHUD {
+    margin: 10px auto;
+  }
+  .teamCharacters {
+    height: 95px;
+  }
+  .teamCharacters > div {
+    width: 32px;
+  }
+
+  .countDown {
+    font-size: 40px;
+  }
+
+  .hpText {
+    font-size: 35px;
+  }
+  .rounds {
+    width: 10vw;
+    margin: 10px;
+  }
+}
+
+@media only screen and (max-width: 655px) {
+  body {
+    overflow: hidden;
+  }
+  /* #startScreen {
+    top: 45%;
+     left: 30%;
+     transform: scale(0.7);
+  } */
+  .joystick {
+    left: -5%;
+    bottom: -15%;
+    transform: scale(0.5);
+  }
+  .swapCharBtn {
+    /* bottom: 40%; */
+    width: 45px;
+  }
+
+  .actionButtons {
+    bottom: -30%;
+    right: -15%;
+    transform: scale(0.4);
+  }
+  .items {
+    bottom: 1%;
+    left: -200px;
+  }
+  .items img {
+    width: 60px;
+  }
+
+  #topHUD {
+    margin: 10px auto;
+  }
+  .teamCharacters {
+    height: 50px;
+  }
+  .teamCharacters > div {
+    width: 15px;
+  }
+
+  .countDown {
+    font-size: 20px;
+  }
+
+  .hpText {
+    font-size: 15px;
+  }
+  .rounds {
+    width: 10vw;
+    margin: 10px;
+  }
+  .energyBar {
+    height: 8px;
+  }
+  .hpBar,
+  .energyBar {
+    height: 6px;
+  }
+}
+
+/* @media only screen and (max-width: 750px) {
+  #startScreen {
+  
+     transform: rotate(90deg);
+  }
+  .joystick {
+    width: 180px;
+    height: 180px;
+    border-radius: 52%;
+    top: 0px;
+    left: 10px;
+  }
+  .swapCharBtn {
+    top: 0%;
+    left: 20%;
+  }
+  
+  .actionButtons {
+    bottom: 0;
+    left: -10%;
+
+  }
+  .items {
+    transform: rotate(90deg);
+    top: 150px;
+    left: 530px;
+    gap: 5vh;
+  }
+  .hpText {
+    font-size: 20px;
+  }
+  .actionButtons > img {
+    width: 70px;
+  }
+  .actionButtons > img:nth-child(5) {
+    bottom: 16%;
+    right: 24%;
+    width: 120px;
+  }
+  #startScreen {
+    top: 50%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+  }
+  #startScreen button {
+    padding: 10px 30px;
+    font-size: 20px;
+    margin: 10px;
+    width: 100%;
+  }
+
+  #topHUD {
+    width: 85%;
+    transform: rotate(90deg);
+    margin-right: 30px;
+    align-items: flex-start;
+    justify-content:center;
+    height: 95%;
+  }
+  .rounds {
+    margin-top: 35px;
+    
+  }
+  .roundsTwo {
+    gap: 0.5vw;
+  }
+  .roundsTwo div {
+    width: 20px;
+  }
+  .countDown {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+} */
+
+/* @media only screen and (max-width: 689px) {
+  #startScreen {
+    transform: rotate(90deg);
+ }
+ .joystick {
+   width: 180px;
+   height: 180px;
+   border-radius: 52%;
+   top: 0px;
+   left: 10px;
+ }
+ .swapCharBtn {
+   top: 0%;
+   left: 20%;
+ }
+ 
+ .actionButtons {
+   bottom: 0;
+   left: -10%;
+ }
+ .items {
+   transform: rotate(90deg);
+   top: 150px;
+   left: 500px;
+   gap: 5vh;
+ }
+ .hpText {
+   font-size: 20px;
+ }
+ .actionButtons > img {
+   width: 60px;
+ }
+ .actionButtons > img:nth-child(5) {
+   bottom: 16%;
+   right: 24%;
+   width: 110px;
+ }
+ .actionButtons > img:nth-child(1) {
+  bottom: 8%;
+  left: 30%;
+}
+.actionButtons > img:nth-child(2) {
+  bottom: 40%;
+  left: 30%;
+}
+.actionButtons > img:nth-child(3) {
+  bottom: 60%;
+  right: 34%;
+}
+.actionButtons > img:nth-child(4) {
+  bottom: 50%;
+  right: 8%;
+}
+
+.actionButtons > img:nth-child(6) {
+  bottom: 6%;
+  right: 8%;
+  width: 60px;
+}
+ #startScreen {
+   top: 45%;
+   left:35%;
+   width: 50%;
+   display: flex;
+   justify-content: center;
+ }
+
+ #topHUD {
+   width: 90%;
+   transform: rotate(90deg);
+   margin-right: 30px;
+   align-items: flex-start;
+   justify-content:center;
+   height: 95%;
+ }
+
+ .roundsTwo {
+   gap: 0.5vw;
+ }
+ 
+ .countDown {
+   font-size: 25px;
+   margin-top: 10px;
+ }
+} */
+
+/* @media only screen and (max-width: 600px) {
+  .actionButtons {
+    bottom: -40px;
+    left: -20%;
+    transform: scale(0.8);
+  }
+  .items {
+    transform: rotate(90deg);
+    top: 170px;
+    left: 530px;
+    gap: 5vh;
+  }
+  .items > img {
+   width: 60px;
+ 
+ }
+ 
+  #startScreen {
+    top: 45%;
+    left:35%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+ 
+  #topHUD {
+    width: 80%;
+    transform: rotate(90deg);
+    margin-right: 130px;
+  }
+ 
+
+} */
+/* @media only screen and (max-width: 550px) {
+  .actionButtons {
+    bottom: -40px;
+    left: -30%;
+    transform: scale(0.6);
+  }
+ 
+ 
+  .items {
+    transform: rotate(90deg);
+    top: 200px;
+    left: 530px;
+    gap: 5vh;
+  }
+
+  #startScreen {
+    top: 45%;
+    left:25%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #gameUI {
+    width: 90%;
+    height: 100%;
+  }
+  #topHUD {
+    width: 80%;
+    margin-right: 300px;
+  } 
+  .joystick {
+   height: 150px;
+   width: 150px;
+  }
+  .innerCircle{
+    height: 60px;
+    width: 60px;
+  }
+  .arrow{
+    font-size: 21px;
+  }
+  .swapCharBtn {
+    width: 60px;
+  
+  }
+  .countDown {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  
+  
+
+} */
+/* @media only screen and (max-width: 490px) {
+  .actionButtons {
+    bottom: -40px;
+    left: -40%;
+    transform: scale(0.6);
+  }
+ 
+ 
+  .items {
+    transform: rotate(90deg);
+    top: 200px;
+    left: 510px;
+    gap: 5vh;
+  }
+
+  #startScreen {
+    top: 45%;
+    left:25%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #gameUI {
+    width: 75%;
+    height: 100%;
+  }
+  .countDown {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  #startScreen {
+    top: 45%;
+    left:15%;
+  }
+  #startScreen button {
+    padding: 10px 20px;
+    font-size: 17px;
+    margin: 10px;
+  }
+ 
+
+} */
+/* @media only screen and (max-width: 450px) {
+  .actionButtons {
+    bottom: -40px;
+    left: -50%;
+    transform: scale(0.6);
+  }
+ 
+ 
+
+  #gameUI {
+    width: 65%;
+  }
+  .countDown {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  #startScreen {
+    top: 45%;
+    left:15%;
+  }
+  #startScreen button {
+    padding: 10px 20px;
+    font-size: 17px;
+    margin: 10px;
+  }
+ 
+
+} */
+/* @media only screen and (max-width: 400px) {
+  .actionButtons {
+    bottom: -50px;
+    left: -70%;
+  }
+ 
+ 
+
+  #gameUI {
+    width: 50%;
+    height: 100%;
+  }
+
+  .joystick {
+    top: 30px;
+    left: 0px;
+
+  }
+  .items {
+    top: 180px;
+    left: 510px;
+    
+  }
+  
+
+
+} */
+/*
+  
+
+
+@media only screen and (max-width: 533px) {
+  html body {
+    overflow: hidden;
+  }
+  .details {
+    width: 100%;
+    font-size: 30px;
+  }
+  #topHUD {
+    width: 40%;
+    transform: scale(0.86);
+  }
+  .rounds {
+    width: 9vw;
+    margin: 0 10px;
+  }
+  .roundsTwo {
+    gap: 0.7vw;
+  }
+  .roundsTwo div {
+    width: 30px;
+  }
+  .countDown {
+    font-size: 31px;
+    margin-top: 5px;
+  }
+  .hpText {
+    font-size: 20px;
+  }
+  .actionButtons {
+    transform: scale(0.8);
+  }
+  .actionButtons {
+    position: absolute;
+    bottom: 0;
+    right: -7%;
+  }
+  #startScreen button {
+    padding: 15px 35px;
+    font-size: 25px;
+    margin: 10px;
+    width: 90%;
+  }
+  .joystick {
+    width: 200px;
+    height: 200px;
+    border-radius: 52%;
+    bottom: 50px;
+    left: 10px;
+  }
+}
+
+@media only screen and (max-width: 477px) {
+  html body {
+    overflow: hidden;
+  }
+  .details {
+    width: 100%;
+    font-size: 20px;
+  }
+  #topHUD {
+    width: 30%;
+    transform: scale(0.8);
+  }
+  .rounds {
+    width: 7vw;
+    margin: 0 10px;
+  }
+  .roundsTwo {
+    gap: 0.5vw;
+  }
+  .roundsTwo div {
+    width: 20px;
+  }
+  .countDown {
+    font-size: 30px;
+    margin-top: 5px;
+  }
+  .hpText {
+    font-size: 20px;
+  }
+  .actionButtons {
+    transform: scale(0.7);
+  }
+
+  .joystick {
+    left: 3px;
+  }
+}
+@media only screen and (max-width: 475px) {
+  html body {
+    overflow: hidden !important;
+  }
+
+  #topHUD {
+    width: 30%;
+    transform: scale(0.95);
+  }
+
+  .roundsTwo {
+    gap: 0.5vw;
+  }
+  .roundsTwo div {
+    width: 50px;
+  }
+  .countDown {
+    font-size: 25px;
+    margin-top: 5px;
+  }
+  .hpText {
+    font-size: 20px;
+  }
+  .actionButtons {
+    transform: scale(0.7);
+    right: -15%;
+  }
+
+  .teamCharacters {
+    height: 100px;
+  }
+  .teamCharacters > div {
+    width: 30px;
+    aspect-ratio: 1;
+  }
+  #startScreen {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  .items {
+    position: absolute;
+    right: 3%;
+    display: flex;
+    flex-flow: column;
+    top: -85%;
+    gap: 5vh;
+  }
+}
+
+@media only screen and (max-width: 465px) {
+  html body {
+    overflow: hidden !important;
+  }
+
+  #topHUD {
+    width: 50%;
+    transform: scale(0.9);
+  }
+}
+@media only screen and (max-width: 420px) {
+  html body {
+    overflow: hidden !important;
+  }
+
+  #topHUD {
+    width: 100%;
+    transform: scale(0.85);
+  }
+  .countDown {
+    font-size: 22px;
+    margin-top: 5px;
+  }
+  .actionButtons {
+    transform: scale(0.6);
+    right: -20%;
+  }
+  .joystick {
+    width: 150px;
+    height: 150px;
+    border-radius: 52%;
+  }
+} */
