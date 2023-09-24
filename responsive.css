@@ -23,6 +23,10 @@
     right: -8%;
     transform: scale(0.6);
   }
+  .actionButtons img {
+    /* transform: scale(0.6); */
+    /* background-image: center center no-repeat !important; */
+  }
   .items {
     bottom: 1%;
     left: -200px;
@@ -60,6 +64,13 @@
   .teamCharacters > div {
     width: 21px;
   }
+  .teamCharacters > div img {
+    aspect-ratio: 0;
+    width: 30px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
   .countDown {
     font-size: 25px;
   }
@@ -77,6 +88,9 @@
   .hpBar,
   .energyBar {
     height: 8px;
+  }
+  .teamCharacters > div > img {
+    aspect-ratio: 0;
   }
 }
 @media only screen and (max-width: 845px) {
@@ -101,6 +115,9 @@
   }
   .teamCharacters > div {
     width: 32px;
+  }
+  .teamCharacters > div > img {
+    aspect-ratio: 0;
   }
 }
 
@@ -142,6 +159,9 @@
   .hpBar,
   .energyBar {
     height: 8px;
+  }
+  .teamCharacters > div > img {
+    aspect-ratio: 0;
   }
 }
 
@@ -193,6 +213,9 @@
   .energyBar {
     height: 7px;
   }
+  .teamCharacters > div > img {
+    aspect-ratio: 0;
+  }
 }
 
 @media only screen and (max-width: 725px) {
@@ -238,6 +261,10 @@
   }
   .countDown {
     font-size: 35px;
+  }
+  .teamCharacters > div > img {
+    aspect-ratio: 0;
+    width: 44px;
   }
 }
 @media only screen and (max-width: 668px) {
@@ -290,6 +317,10 @@
   .rounds {
     width: 10vw;
     margin: 10px;
+  }
+  .teamCharacters > div > img {
+    aspect-ratio: 0;
+    width: 42px;
   }
 }
 
@@ -352,6 +383,10 @@
   .hpBar,
   .energyBar {
     height: 6px;
+  }
+  .teamCharacters > div > img {
+    aspect-ratio: 0;
+    width: 23px;
   }
 }
 
